@@ -286,17 +286,20 @@ if __name__ == "__main__":
     # 1. 크롤링 실행
     data = crawl_all_subjects()
     
-    # 2. JSON 파일 저장 (로컬 백업용)
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    target_path = os.path.join(current_dir, "../../apps/web/assets/data/questions.backup.json")
-    
-    os.makedirs(os.path.dirname(target_path), exist_ok=True)
-    with open(target_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    
-    print(f"\n{'='*60}")
-    print(f"✨ 총 {len(data)}문제 로컬 저장 완료!")
-    print(f"📁 경로: {target_path}")
+    # 2. CI 환경이 아닐 때만 JSON 파일 저장 (로컬 백업용)
+    if os.getenv("IS_CI") != "true":
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        target_path = os.path.join(current_dir, "../../apps/web/assets/data/questions.backup.json")
+        
+        os.makedirs(os.path.dirname(target_path), exist_ok=True)
+        with open(target_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        print(f"\n{'='*60}")
+        print(f"✨ 총 {len(data)}문제 로컬 저장 완료!")
+        print(f"📁 경로: {target_path}")
+    else:
+        print(f"\n🚀 CI 환경: 로컬 파일 저장을 건너뛰고 DB 업데이트를 진행합니다.")
     
     # 3. 데이터베이스 저장
     print(f"{'-'*60}")
