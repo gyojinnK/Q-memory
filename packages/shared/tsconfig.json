@@ -13,6 +13,6 @@
     "declarationMap": true,
     "outDir": "./dist"
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "**/*.vue", "env.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

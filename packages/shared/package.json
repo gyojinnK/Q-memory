@@ -10,6 +10,7 @@
     "./types": "./types/index.ts",
     "./utils": "./utils/index.ts",
     "./styles": "./styles/index.css",
+    "./styles/*": "./styles/*",
     "./components": "./components/index.ts",
     "./layouts": "./layouts/index.ts"
   },

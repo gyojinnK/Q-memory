@@ -43,8 +43,8 @@
 
 <script setup lang="ts">
 import type { Question } from '@q-memory/shared/types'
-import { PageLayout } from '@cursor-vibe/shared/layouts'
-import { Button } from '@cursor-vibe/shared/components'
+import { PageLayout } from '@q-memory/shared/layouts'
+import { Button } from '@q-memory/shared/components'
 
 // Composable 사용
 const { fetchQuestions: getAllQuestions, fetchQuestionsBySubject } = useQuestions()
