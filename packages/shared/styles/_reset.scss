@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  background: var(--color-bg-gradient);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+#__nuxt {
+  min-height: 100vh;
+}
+

@@ -1,0 +1,35 @@
+{
+  "name": "@q-memory/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.33.0",
+    "nuxt": "^3.13.0",
+    "prettier": "^3.7.4",
+    "sass": "^1.97.1",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^2.1.10"
+  },
+  "dependencies": {
+    "@q-memory/shared": "*",
+    "@supabase/supabase-js": "^2.89.0",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0"
+  }
+}

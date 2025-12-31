@@ -1,0 +1,34 @@
+{
+  "name": "q-memory-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "generate": "npm run generate --workspace=apps/web",
+    "preview": "npm run preview --workspace=apps/web",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "format": "prettier --write \"**/*.{js,ts,vue,json,css}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,vue,json,css}\"",
+    "prepare": "npm run prepare --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/eslint-config": "^12.1.0",
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.33.0",
+    "prettier": "^3.7.4",
+    "typescript": "^5.5.4"
+  }
+}
