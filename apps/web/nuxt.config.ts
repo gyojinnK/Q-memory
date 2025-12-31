@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     '@shared': '../packages/shared'
   },
 
-  css: ['@shared/styles/index.scss'],
+  css: ['@q-memory/shared/styles/index.scss'],
 
   runtimeConfig: {
     public: {
