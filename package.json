@@ -8,10 +8,10 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace=apps/web",
-    "build": "npm run build --workspace=apps/web",
-    "generate": "npm run generate --workspace=apps/web",
-    "preview": "npm run preview --workspace=apps/web",
+    "dev": "npm run dev -w @q-memory/web",
+    "build": "npm run build -w @q-memory/web",
+    "generate": "npm run generate -w @q-memory/web",
+    "preview": "npm run preview -w @q-memory/web",
     "lint": "npm run lint --workspaces",
     "lint:fix": "npm run lint:fix --workspaces",
     "format": "prettier --write \"**/*.{js,ts,vue,json,css}\"",
