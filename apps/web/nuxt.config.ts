@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
+  ssr: false,
   devtools: { enabled: true },
 
   imports: {
@@ -26,6 +27,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: './',
     head: {
       title: '정보처리기사 카드 문제집',
       meta: [
